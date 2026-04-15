@@ -1,27 +1,67 @@
 ---
-title: "Hackathon_data_wrangling_ext"
+title: "Practical Data Wrangling for Malaria Research and Analysis"
 author: "Cameline N. Orlendo and Thomas M. Mawora"
 format: html
 editor: visual
 ---
 
-## Data Wrangling Hackathon Extension
+Introduction to the DHS 
 
-Data wrangling
+The DHS Malaria Dataset for Kenya 2022 is not a standalone Malaria Indicator Survey (MIS) , rather malaria indicators were fully integrated into the 2022 Kenya Demographic and Health Survey (KDHS 2022), a nationally representative household survey conducted by the Kenya National Bureau of Statistics (KNBS) with technical support from The DHS Program (USAID).
 
-## Running Code
+The survey collected data on key malaria topics, including:
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+ Ownership and use of insecticide-treated nets (ITNs)
 
-```{r}
+ Indoor residual spraying
+
+ Malaria prevention during pregnancy (e.g., intermittent preventive treatment – IPTp)
+
+ Case management of fever in children under 5 (treatment-seeking, antimalarial drugs)
+
+The primary goal was to provide up-to-date estimates of malaria prevention and treatment indicators alongside broader demographic and health data. The microdata are publicly available (after free registration) from The DHS Program website. There is no single “malaria-only” file; malaria variables are embedded across the standard recode files, especially in the Household, Household Member, Children’s, and Individual (Women’s) recodes.
+
+Objectives for this Session
+
+The overacrching objective for this session is to build participants’ capacity to clean, transform, integrate, and prepare malaria-related datasets for accurate and reproducible analysis using R.By the end of the training, participants will be able to:
+
+Identify common data quality challenges in malaria analytics, including missing values, inconsistent formats, duplicates, outliers, and invalid codes.
+
+Apply core data wrangling workflows in R using the tidyverse, including importing, cleaning, recoding, filtering, summarizing, and reshaping datasets.
+
+Integrate multiple malaria-related datasets using appropriate common identifiers, such as household, individual, cluster, or geographic keys, to create analysis-ready data.
+
+About the Datasets we will use: 
+
+Files in the KDHS 2022 dataset can be got in various formats, including (Stata .dta, SPSS .sav, SAS, and flat ASCII . For this instance we will use the stata files and upload them into R. Key files include
+
+ KEHR8C – Household Recode (household-level data, including ITN ownership)
+
+ KEPR8C – Household Member Recode (individual-level data for all household members, often includes malaria testing where conducted)
+
+ KEKR8C – Children’s Recode (children under 5, fever and treatment data)
+
+ KEIR8C – Individual Recode (women 15–49, including malaria in pregnancy)
+
+ KEMR8C – Men’s Recode (men 15–54)
+
+ KEBR8C – Births Recode
+
+ Geographic files (KEGE8A shape files + covariates)
+
+We will focus on the first two datasets, and the third if time allows.
+
+Running Code
+
+When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+{r}
 1 + 1
-```
 
 You can add options to executable code like this
 
-```{r}
+{r}
 #| echo: false
 2 * 2
-```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+The echo: false option disables the printing of code (only output is displayed).
