@@ -1,13 +1,34 @@
 ---
-title: "Hackathon_data_wrangling_ext"
+title: "Practical Data Wrangling for Malaria Research and Analysis"
 author: "Cameline N. Orlendo and Thomas M. Mawora"
 format: html
 editor: visual
 ---
 
-## Data Wrangling Hackathon Extension
+## Introduction to the DHS 
 
-Data wrangling
+The DHS Malaria Dataset for Kenya 2022 is not a standalone Malaria Indicator Survey (MIS) , rather malaria indicators were fully integrated into the 2022 Kenya Demographic and Health Survey (KDHS 2022), a nationally representative household survey conducted by the Kenya National Bureau of Statistics (KNBS) with technical support from The DHS Program (USAID).
+
+The survey collected data on key malaria topics, including:
+
+-    Ownership and use of insecticide-treated nets (ITNs)
+-    Indoor residual spraying
+-    Malaria prevention during pregnancy (e.g., intermittent preventive treatment – IPTp)
+-    Case management of fever in children under 5 (treatment-seeking, antimalarial drugs)
+
+The primary goal was to provide up-to-date estimates of malaria prevention and treatment indicators alongside broader demographic and health data. The microdata are publicly available (after free registration) from The DHS Program website. There is no single “malaria-only” file; malaria variables are embedded across the standard **recode** files, especially in the Household, Household Member, Children’s, and Individual (Women’s) recodes.
+
+## Objectives for this Session
+
+The overacrching objective for this session is to build participants’ capacity to clean, transform, integrate, and prepare malaria-related datasets for accurate and reproducible analysis using R.\
+\
+By the end of the training, participants will be able to:
+
+1.  Identify common data quality challenges in malaria analytics, including missing values, inconsistent formats, duplicates, outliers, and invalid codes.
+2.  Apply core data wrangling workflows in R using the tidyverse, including importing, cleaning, recoding, filtering, summarizing, and reshaping datasets.
+3.  Integrate multiple malaria-related datasets using appropriate common identifiers, such as household, individual, cluster, or geographic keys, to create analysis-ready data.
+
+## About the datasets we will use: 
 
 ## Running Code
 
